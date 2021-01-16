@@ -1,17 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {BottomTabNavigator} from './navigation/BottomTabNavigator.js';
+import {View, Text, StyleSheet, Button, Alert} from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import {MainTabScreen} from './navigation/MainTabScreen'
 
-export default function App() {
-  return (
-      <BottomTabNavigator/>
-  );
+const Drawer = createDrawerNavigator();
+
+const App = () => {
+  return(
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={MainTabScreen} />
+      </Drawer.Navigator>
+  </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-  }
-});
+export default App;
