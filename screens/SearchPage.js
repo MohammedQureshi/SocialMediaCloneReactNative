@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Button, Alert} from 'react-native';
 
 export function SearchPage(){
+    
     return(
         <View style={style.mainView}>
             <View style={style.mainView} />
