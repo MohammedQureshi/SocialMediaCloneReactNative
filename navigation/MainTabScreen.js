@@ -48,17 +48,13 @@ export const MainTabScreen = () => {
 }
 
 const HomeStackScreen =({navigation}) => (
-  <HomeStack.Navigator screenOptions={{headerStyle: {backgroundColor: '#FFFFFF'}, headerTintColor: '#1DA1F3', headerTitleStyle: { fontWeight: 'bold', textAlign:'center', alignSelf:'center' }}}>
+  <HomeStack.Navigator screenOptions={{headerStyle: {backgroundColor: '#FFFFFF'}, headerTintColor: '#1DA1F3', headerTitleStyle: { fontWeight: 'bold', textAlign:'center', alignSelf:'center', marginRight: 65}}}>
     <HomeStack.Screen name="Home" component={HomePage} options={{
       headerLeft: () => (
         <Icon.Button name="menu" size={25} backgroundColor='#FFFFFF' color='#209FEC' onPress={() => {navigation.openDrawer()}} />
       ),
       headerRight: () => {
-        <View>
-          <Icon.Button name="menu" size={25} backgroundColor='#FFFFFF' color='#209FEC' onPress={() => {navigation.openDrawer()}} />
-          <Icon.Button name="menu" size={25} backgroundColor='#FFFFFF' color='#209FEC' onPress={() => {navigation.openDrawer()}} />
-          <Icon.Button name="menu" size={25} backgroundColor='#FFFFFF' color='#209FEC' onPress={() => {navigation.openDrawer()}} />
-        </View>
+        <Icon.Button name="menu" size={25} backgroundColor='#FFFFFF' color='#209FEC' onPress={() => {navigation.openDrawer()}} />
       }
     }} />
   </HomeStack.Navigator> 
